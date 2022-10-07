@@ -1,0 +1,1 @@
+(()=>{alert("hihihi");let e=document.getElementById("content"),t=document.createElement("img");t.src="../assets/GophBGOnly2x.png",e.appendChild(t)})();
