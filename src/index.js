@@ -1,8 +1,17 @@
-alert("hihihi");
+import './style.css';
 
 let contentDiv = document.getElementById("content");
+document.body.style.backgroundImage="url('../assets/GophBGOnly2x.png')";
 
-let bgimage = document.createElement('img')
-bgimage.src = '../assets/GophBGOnly2x.png';
+let tabContainer = document.createElement("div");
+tabContainer.className = 'tabContainer';
+contentDiv.appendChild(tabContainer);
 
-contentDiv.appendChild(bgimage);
+
+
+//make tabs
+for(let i = 0; i < 3; i++){
+  let tab = document.createElement("div");
+  tab.innerText = `tab${i}`;
+  tabContainer.appendChild(tab);
+}
