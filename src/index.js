@@ -54,4 +54,24 @@ function makeTab1(){
   console.log("hello")
 }
 
+function makeTab2(){
+  let mainDiv = document.createElement("div");
+  mainDiv.id = "mainDiv";
+  mainDiv.style.gridRowStart = '2';
+  mainDiv.style.gridColumn= '1/4';
+  mainDiv.style.border = "2px solid black";
+  mainDiv.style.display = "grid";
+  mainDiv.style.width = '65%';
+  mainDiv.style.justifyItems = "center";
+  mainDiv.style.gridTemplateRows = "1fr 2fr 2fr";
+
+  let menuDiv1 = document.createElement("div");
+  menuDiv1.innerHTML = "Welcome to Food";
+  menuDiv1.className = "menuDiv1 ";
+  menuDiv1.style.fontSize = "30px";
+  menuDiv1.style.fontFamily = "sans-serif";
+
+  mainDiv.appendChild(menuDiv1);
+
+}
 makeTab1();
