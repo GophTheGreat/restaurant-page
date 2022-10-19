@@ -19,17 +19,45 @@ function makeTab1(){
   titleDiv.style.fontFamily = "sans-serif";
 
   let aboutDiv = document.createElement("div")
+  aboutDiv.style.minWidth = "450px";
+  aboutDiv.style.maxWidth = "80%";
+  aboutDiv.style.backgroundColor = "rgb(29, 249, 189)";
+  aboutDiv.style.clipPath = "polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%)";
+  aboutDiv.style.display = "grid";
+  aboutDiv.style.gridTemplateRows = "1fr 3fr 1fr";
+
   let aboutSubDiv1 = document.createElement("div")
   aboutSubDiv1.innerHTML = "About This Restaurant"
   aboutSubDiv1.style.display = "grid";
-  aboutSubDiv1.style.justifyItems = "center";
+  aboutSubDiv1.style.justifySelf = "center";
+  aboutSubDiv1.style.textAlign = "center";
   aboutSubDiv1.style.fontFamily = "sans-serif";
-  aboutSubDiv1.style.fontSize = "20px";
+  aboutSubDiv1.style.fontSize = "40px";
+  aboutSubDiv1.style.fontWeight = "bold";
+  aboutSubDiv1.style.overflowWrap = "normal";
+  aboutSubDiv1.style.width = "60%";
+
   aboutDiv.appendChild(aboutSubDiv1);
 
   let aboutSubDiv2 = document.createElement("div");
-  aboutSubDiv2.innerHTML = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+  aboutSubDiv2.innerHTML = "“Look, having nuclear—my uncle was a great professor and scientist and engineer, Dr. John Trump at MIT; good genes, very good genes, OK, very smart, the Wharton School of Finance, very good, very smart —you know, if you’re a conservative Republican, if I were a liberal, if, like, OK, if I ran as a liberal Democrat, they would say I’m one of the smartest people anywhere in the world—it’s true!—but when you’re a conservative Republican they try—oh, do they do a number—that’s why I always start off: Went to Wharton, was a good student, went there, went there, did this, built a fortune—you know I have to give my like credentials all the time, because we’re a little disadvantaged—but you look at the nuclear deal, the thing that really bothers me—it would have been so easy, and it’s not as important as these lives are (nuclear is powerful; my uncle explained that to me many, many years ago, the power and that was 35 years ago; he would explain the power of what’s going to happen and he was right—who would have thought?), but when you look at what’s going on with the four prisoners—now it used to be three, now it’s four—but when it was three and even now, I would have said it’s all in the messenger; fellas, and it is fellas because, you know, they don’t, they haven’t figured that the women are smarter right now than the men, so, you know, it’s gonna take them about another 150 years—but the Persians are great negotiators, the Iranians are great negotiators, so, and they, they just killed, they just killed us."
+  aboutSubDiv2.style.fontSize = "19px";
+  aboutSubDiv2.style.margin = "15px";
+  
   aboutDiv.appendChild(aboutSubDiv2);
+  
+  let aboutSubDiv3 = document.createElement("div");
+  aboutSubDiv3.innerHTML = "Chef \"The Best\" Marioluigi";
+  aboutSubDiv3.style.fontSize = "24px";
+  aboutSubDiv3.style.fontWeight = "bold"
+  aboutSubDiv3.style.fontFamily = "sans-serif";
+  aboutSubDiv3.style.display = "grid";
+  aboutSubDiv3.style.justifySelf = "center";
+  aboutSubDiv3.style.alignSelf = "end";
+  aboutSubDiv3.style.marginTop = "45px";
+  aboutDiv.appendChild(aboutSubDiv3);
+
+
 
   contentDiv.appendChild(mainDiv);
   mainDiv.appendChild(titleDiv);
@@ -120,4 +148,4 @@ for(let i = 0; i < 3; i++){
 }
 
 
-makeTab3();
+makeTab1();
