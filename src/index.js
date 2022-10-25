@@ -1,4 +1,5 @@
 import './style.css';
+import foodimg1 from './../assets/Food1.jpg'
 
 let contentDiv = document.getElementById("content");
 document.body.style.backgroundImage="url('../assets/GophBGOnly2x.png')";
@@ -22,7 +23,7 @@ function makeTab1(){
   aboutDiv.style.minWidth = "450px";
   aboutDiv.style.maxWidth = "80%";
   aboutDiv.style.backgroundColor = "rgb(29, 249, 189)";
-  aboutDiv.style.clipPath = "polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%)";
+  aboutDiv.style.clipPath = " polygon(100% 0, 100% 89%, 50% 100%, 0 89%, 0 0)";
   aboutDiv.style.display = "grid";
   aboutDiv.style.gridTemplateRows = "1fr 3fr 1fr";
 
@@ -55,6 +56,7 @@ function makeTab1(){
   aboutSubDiv3.style.justifySelf = "center";
   aboutSubDiv3.style.alignSelf = "end";
   aboutSubDiv3.style.marginTop = "45px";
+  aboutSubDiv3.style.marginBottom = "45px";
   aboutDiv.appendChild(aboutSubDiv3);
 
 
@@ -66,17 +68,62 @@ function makeTab1(){
 }
 
 function makeTab2(){
+  clearTab();
   let mainDiv = makeMainDiv();
 
   let menuDiv1 = document.createElement("div");
-  menuDiv1.innerHTML = "Welcome to Food";
+  menuDiv1.innerHTML = "Menu";
   menuDiv1.className = "menuDiv1 ";
   menuDiv1.style.fontSize = "30px";
   menuDiv1.style.fontFamily = "sans-serif";
 
+  let itemDiv1 = document.createElement("div");
+  itemDiv1.style.display = "grid";
+  itemDiv1.style.gridTemplateRows = "1fr 1fr 4fr";
+  itemDiv1.style.background = "lightblue";
+  itemDiv1.style.clipPath = " polygon(100% 0, 100% 89%, 50% 100%, 0 89%, 0 0)";
+  itemDiv1.style.minWidth = "450px";
+  itemDiv1.style.maxWidth = "80%";
+
+  let itemDiv1Sub1 = document.createElement("div");
+  itemDiv1Sub1.innerHTML = "Pasghetti"
+  itemDiv1Sub1.style.display = "grid";
+  itemDiv1Sub1.style.fontSize = "20px";
+  itemDiv1Sub1.style.fontFamily = "sans-serif";
+  itemDiv1Sub1.style.fontWeight = "bold";
+  itemDiv1Sub1.style.justifySelf = "center";
+
+  let itemDiv1Sub2 = document.createElement("div");
+  itemDiv1Sub2.innerHTML = "Succulent toroidal lettuce dipped in ambrosia, seared with mustard, and lovingly cooed into a coma before being wrapped in dogma and obedience"
+  itemDiv1Sub2.style.display = "grid";
+  itemDiv1Sub2.style.fontSize = "18px";
+  itemDiv1Sub2.style.fontFamily = "sans-serif";
+  itemDiv1Sub2.style.fontWeight = "bold";
+  itemDiv1Sub2.style.alignItems = "start";
+  itemDiv1Sub2.style.marginLeft = "10px";
+  itemDiv1Sub2.style.marginRight = "10px";
+  itemDiv1Sub2.style.textAlign = "center";
+
+  let itemDiv1Sub3 = document.createElement("div");
+  let food1 = document.createElement("img")
+  food1.src = foodimg1;
+  food1.style.width = "300px";
+  food1.style.height = "300px";
+  itemDiv1Sub3.appendChild(food1);
+  itemDiv1Sub3.style.display = "grid";
+  itemDiv1Sub3.style.justifyContent = "center";
+  itemDiv1Sub3.style.marginBottom = "-5px";
+
+
+
+  itemDiv1.appendChild(itemDiv1Sub1);
+  itemDiv1.appendChild(itemDiv1Sub2);
+  itemDiv1.appendChild(itemDiv1Sub3);
+
   contentDiv.appendChild(mainDiv);
   mainDiv.appendChild(menuDiv1);
 
+  mainDiv.appendChild(itemDiv1);
 }
 
 function makeTab3(){
@@ -148,4 +195,4 @@ for(let i = 0; i < 3; i++){
 }
 
 
-makeTab1();
+makeTab2();
