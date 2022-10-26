@@ -33,3 +33,25 @@ body{
   align-content: center;
   background-color: lightblue;
 }
+
+.outer{
+  clip-path: polygon(100% 0, 100% 89%, 50% 100%, 0 89%, 0 0);
+  background: lightgreen;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  max-width: 80%;
+}
+
+.inner{
+display: grid;
+background: lightblue;
+clip-path: polygon(100% 0, 100% 89%, 50% 100%, 0 89%, 0 0);
+min-width: 450px;
+max-width: 80%;
+margin: 5%;
+}
+
+.menu{
+  grid-template-rows: 1fr 1fr 4fr;
+}

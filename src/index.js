@@ -77,13 +77,11 @@ function makeTab2(){
   menuDiv1.style.fontSize = "30px";
   menuDiv1.style.fontFamily = "sans-serif";
 
+  let itemDiv1Outer = document.createElement("div");
+  itemDiv1Outer.className = "outer";
+
   let itemDiv1 = document.createElement("div");
-  itemDiv1.style.display = "grid";
-  itemDiv1.style.gridTemplateRows = "1fr 1fr 4fr";
-  itemDiv1.style.background = "lightblue";
-  itemDiv1.style.clipPath = " polygon(100% 0, 100% 89%, 50% 100%, 0 89%, 0 0)";
-  itemDiv1.style.minWidth = "450px";
-  itemDiv1.style.maxWidth = "80%";
+  itemDiv1.classList = "inner menu";
 
   let itemDiv1Sub1 = document.createElement("div");
   itemDiv1Sub1.innerHTML = "Pasghetti"
@@ -114,8 +112,19 @@ function makeTab2(){
   itemDiv1Sub3.style.justifyContent = "center";
   itemDiv1Sub3.style.marginBottom = "-5px";
 
+  ///////
+
+  let itemDiv2Outer = document.createElement("div");
+  itemDiv1Outer.className = "outer";
+
+  let itemDiv2 = document.createElement("div");
+  itemDiv1.classList = "inner menu";
+
+  let itemDiv2Sub1 = document.createElement("div");
+  
 
 
+  itemDiv1Outer.appendChild(itemDiv1);
   itemDiv1.appendChild(itemDiv1Sub1);
   itemDiv1.appendChild(itemDiv1Sub2);
   itemDiv1.appendChild(itemDiv1Sub3);
@@ -123,7 +132,7 @@ function makeTab2(){
   contentDiv.appendChild(mainDiv);
   mainDiv.appendChild(menuDiv1);
 
-  mainDiv.appendChild(itemDiv1);
+  mainDiv.appendChild(itemDiv1Outer);
 }
 
 function makeTab3(){
