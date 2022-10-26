@@ -1,5 +1,6 @@
 import './style.css';
 import foodimg1 from './../assets/Food1.jpg'
+import foodimg2 from './../assets/Food2.jpg'
 
 let contentDiv = document.getElementById("content");
 document.body.style.backgroundImage="url('../assets/GophBGOnly2x.png')";
@@ -71,11 +72,19 @@ function makeTab2(){
   clearTab();
   let mainDiv = makeMainDiv();
 
+  contentDiv.appendChild(mainDiv);
+
+  ///////
+
   let menuDiv1 = document.createElement("div");
   menuDiv1.innerHTML = "Menu";
   menuDiv1.className = "menuDiv1 ";
   menuDiv1.style.fontSize = "30px";
   menuDiv1.style.fontFamily = "sans-serif";
+
+  mainDiv.appendChild(menuDiv1);
+
+  ///////
 
   let itemDiv1Outer = document.createElement("div");
   itemDiv1Outer.className = "outer";
@@ -84,55 +93,58 @@ function makeTab2(){
   itemDiv1.classList = "inner menu";
 
   let itemDiv1Sub1 = document.createElement("div");
+  itemDiv1Sub1.classList = "menusub1";
   itemDiv1Sub1.innerHTML = "Pasghetti"
-  itemDiv1Sub1.style.display = "grid";
-  itemDiv1Sub1.style.fontSize = "20px";
-  itemDiv1Sub1.style.fontFamily = "sans-serif";
-  itemDiv1Sub1.style.fontWeight = "bold";
-  itemDiv1Sub1.style.justifySelf = "center";
+
 
   let itemDiv1Sub2 = document.createElement("div");
+  itemDiv1Sub2.classList = "menusub2";
   itemDiv1Sub2.innerHTML = "Succulent toroidal lettuce dipped in ambrosia, seared with mustard, and lovingly cooed into a coma before being wrapped in dogma and obedience"
-  itemDiv1Sub2.style.display = "grid";
-  itemDiv1Sub2.style.fontSize = "18px";
-  itemDiv1Sub2.style.fontFamily = "sans-serif";
-  itemDiv1Sub2.style.fontWeight = "bold";
-  itemDiv1Sub2.style.alignItems = "start";
-  itemDiv1Sub2.style.marginLeft = "10px";
-  itemDiv1Sub2.style.marginRight = "10px";
-  itemDiv1Sub2.style.textAlign = "center";
 
   let itemDiv1Sub3 = document.createElement("div");
-  let food1 = document.createElement("img")
+  itemDiv1Sub3.classList = "menusub3";
+  let food1 = document.createElement("img");
+  food1.className = "foodpic";
   food1.src = foodimg1;
-  food1.style.width = "300px";
-  food1.style.height = "300px";
   itemDiv1Sub3.appendChild(food1);
-  itemDiv1Sub3.style.display = "grid";
-  itemDiv1Sub3.style.justifyContent = "center";
-  itemDiv1Sub3.style.marginBottom = "-5px";
-
-  ///////
-
-  let itemDiv2Outer = document.createElement("div");
-  itemDiv1Outer.className = "outer";
-
-  let itemDiv2 = document.createElement("div");
-  itemDiv1.classList = "inner menu";
-
-  let itemDiv2Sub1 = document.createElement("div");
-  
-
 
   itemDiv1Outer.appendChild(itemDiv1);
   itemDiv1.appendChild(itemDiv1Sub1);
   itemDiv1.appendChild(itemDiv1Sub2);
   itemDiv1.appendChild(itemDiv1Sub3);
-
-  contentDiv.appendChild(mainDiv);
-  mainDiv.appendChild(menuDiv1);
-
   mainDiv.appendChild(itemDiv1Outer);
+
+  ///////
+
+  let itemDiv2Outer = document.createElement("div");
+  itemDiv2Outer.className = "outer";
+
+  let itemDiv2 = document.createElement("div");
+  itemDiv2.classList = "inner menu";
+
+  let itemDiv2Sub1 = document.createElement("div");
+  itemDiv2Sub1.classList = "menusub1";
+  itemDiv2Sub1.innerHTML = "Rubbish"
+
+  let itemDiv2Sub2 = document.createElement("div");
+  itemDiv2Sub2.classList = "menusub2";
+  itemDiv2Sub2.innerHTML = "It's probably a tortilla with some food stuff on top of it";
+
+  let itemDiv2Sub3 = document.createElement("div");
+  itemDiv2Sub3.classList = "menusub3"
+  let food2 = document.createElement("img");
+  food2.className = "foodpic";
+  food2.src = foodimg2
+  itemDiv2Sub3.appendChild(food2);
+  
+  itemDiv2Outer.appendChild(itemDiv2);
+  itemDiv2.appendChild(itemDiv2Sub1);
+  itemDiv2.appendChild(itemDiv2Sub2);
+  itemDiv2.appendChild(itemDiv2Sub3);
+  mainDiv.appendChild(itemDiv2Outer);
+
+  //////
+
 }
 
 function makeTab3(){
@@ -180,7 +192,8 @@ function makeMainDiv(){
   mainDiv.style.display = "grid";
   mainDiv.style.width = '65%';
   mainDiv.style.justifyItems = "center";
-  mainDiv.style.gridTemplateRows = "1fr 2fr 2fr";
+  mainDiv.style.gridTemplateRows = "5px 2fr 2fr";
+  mainDiv.style.rowGap = "5em";
 
   return mainDiv;
 }

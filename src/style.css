@@ -40,7 +40,8 @@ body{
   display: grid;
   align-items: center;
   justify-items: center;
-  max-width: 80%;
+  width: 500px;
+  height: 500px;
 }
 
 .inner{
@@ -48,10 +49,40 @@ display: grid;
 background: lightblue;
 clip-path: polygon(100% 0, 100% 89%, 50% 100%, 0 89%, 0 0);
 min-width: 450px;
-max-width: 80%;
-margin: 5%;
+width: 480px;
+height:480px;
 }
 
 .menu{
   grid-template-rows: 1fr 1fr 4fr;
+}
+
+.menusub1{
+  display: grid;
+  font-size: 20px;
+  font-family: sans-serif;
+  font-weight: bold;
+  justify-self: center;
+}
+
+.menusub2{
+  display: grid;
+  font-size: 18px;
+  font-family: sans-serif;
+  font-size: bold;
+  align-items: start;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.menusub3{
+  display: grid;
+  justify-self: center;
+  margin-bottom: -5px;
+}
+
+.foodpic{
+  width: 300px;
+  height: 300px;
 }
