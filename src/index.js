@@ -20,22 +20,14 @@ function makeTab1(){
   /////////Title Div
 
   let titleDiv = document.createElement("div");
-  titleDiv.innerHTML = "Welcome to Food";
-  titleDiv.className = "titleDiv";
-  titleDiv.style.fontSize = "30px";
-  titleDiv.style.fontFamily = "sans-serif";
+  titleDiv.innerHTML = "~Welcome to Food~";
+  titleDiv.className = "header";
   mainDiv.appendChild(titleDiv);
 
   ////////About Div
 
   let aboutDiv = document.createElement("div");
   aboutDiv.className = "outer";
-  // aboutDiv.style.minWidth = "450px";
-  // aboutDiv.style.maxWidth = "80%";
-  // aboutDiv.style.backgroundColor = "rgb(29, 249, 189)";
-  // aboutDiv.style.clipPath = " polygon(100% 0, 100% 89%, 50% 100%, 0 89%, 0 0)";
-  // aboutDiv.style.display = "grid";
-  // aboutDiv.style.gridTemplateRows = "1fr 3fr 1fr";
 
   let aboutDivInner = document.createElement("div");
   aboutDivInner.className = "inner";
@@ -45,14 +37,7 @@ function makeTab1(){
   let aboutSubDiv1 = document.createElement("div")
   aboutSubDiv1.innerHTML = "About This Restaurant"
   aboutSubDiv1.className = "menusub1";
-  // aboutSubDiv1.style.display = "grid";
-  // aboutSubDiv1.style.justifySelf = "center";
-  // aboutSubDiv1.style.textAlign = "center";
-  // aboutSubDiv1.style.fontFamily = "sans-serif";
   aboutSubDiv1.style.fontSize = "40px";
-  // aboutSubDiv1.style.fontWeight = "bold";
-  // aboutSubDiv1.style.overflowWrap = "normal";
-  // aboutSubDiv1.style.width = "60%";
 
   aboutDivInner.appendChild(aboutSubDiv1);
 
@@ -60,6 +45,7 @@ function makeTab1(){
   aboutSubDiv2.innerHTML = `“Look, having nuclear—my uncle was a great professor and scientist and engineer, Dr. John Trump at MIT; good genes, very good genes, OK, very smart, the Wharton School of Finance, very good, very smart —you know, if you’re a conservative Republican, if I were a liberal, if, like, OK, if I ran as a liberal Democrat, they would say I’m one of the smartest people anywhere in the world—it’s true!—but when you’re a conservative Republican they try—oh, do they do a number—that’s why I always start off..."`
   aboutSubDiv2.style.fontSize = "19px";
   aboutSubDiv2.style.margin = "15px";
+  aboutSubDiv2.style.color = "gold";
   
   aboutDivInner.appendChild(aboutSubDiv2);
   
@@ -79,11 +65,12 @@ function makeTab1(){
   hourDiv.style.height = '265px';
   hourDiv.style.marginTop = '35px';
   mainDiv.appendChild(hourDiv);
+  
   let hourDivInner = document.createElement("div");
   hourDivInner.className = "inner"
   hourDivInner.display = "grid";
-  hourDivInner.style.gridTemplateRows = '55px repeat(5, 35px)';
-  hourDivInner.style.height = '255px';
+  hourDivInner.style.gridTemplateRows = '65px repeat(5, 35px)';
+  hourDivInner.style.height = '250px';
   hourDiv.appendChild(hourDivInner);
 
   let hourDivSub1 = document.createElement("div")
@@ -130,9 +117,7 @@ function makeTab2(){
 
   let menuDiv1 = document.createElement("div");
   menuDiv1.innerHTML = "Menu";
-  menuDiv1.className = "menuDiv1 ";
-  menuDiv1.style.fontSize = "30px";
-  menuDiv1.style.fontFamily = "sans-serif";
+  menuDiv1.className = "header";
 
   mainDiv.appendChild(menuDiv1);
 
@@ -223,7 +208,33 @@ function makeTab2(){
   itemDiv3.appendChild(itemDiv3Sub3);
   mainDiv.appendChild(itemDiv3Outer);
 
+  ////////Fourth Item
+  let itemDiv4Outer = document.createElement("div");
+  itemDiv4Outer.className = "outer";
 
+  let itemDiv4 = document.createElement("div");
+  itemDiv4.classList = "inner menu";
+
+  let itemDiv4Sub1 = document.createElement("div");
+  itemDiv4Sub1.classList = "menusub1";
+  itemDiv4Sub1.innerHTML = "Meal #4"
+
+  let itemDiv4Sub2 = document.createElement("div");
+  itemDiv4Sub2.classList = "menusub2";
+  itemDiv4Sub2.innerHTML = "Sausage with vegetables, thing, and plate. Served to perfection after cooking.";
+
+  let itemDiv4Sub3 = document.createElement("div");
+  itemDiv4Sub3.classList = "menusub3"
+  let food4 = document.createElement("img");
+  food4.className = "foodpic";
+  food4.src = foodimg4
+  itemDiv4Sub3.appendChild(food4);
+
+  itemDiv4Outer.appendChild(itemDiv4);
+  itemDiv4.appendChild(itemDiv4Sub1);
+  itemDiv4.appendChild(itemDiv4Sub2);
+  itemDiv4.appendChild(itemDiv4Sub3);
+  mainDiv.appendChild(itemDiv4Outer);
 }
 
 function makeTab3(){
@@ -267,12 +278,11 @@ function makeMainDiv(){
   mainDiv.id = "mainDiv";
   mainDiv.style.gridRowStart = '2';
   mainDiv.style.gridColumn= '1/4';
-  mainDiv.style.border = "2px solid black";
   mainDiv.style.display = "grid";
   mainDiv.style.width = '1000px';
   mainDiv.style.justifyItems = "center";
-  mainDiv.style.gridTemplateRows = "35px repeat(auto-fit, minmax(400px, 1fr))";
-  mainDiv.style.rowGap = "5em";
+  mainDiv.style.gridTemplateRows = "100px repeat(auto-fit, minmax(400px, 1fr))";
+  mainDiv.style.rowGap = "2em";
   mainDiv.style.paddingBottom = "10px";
   mainDiv.style.paddingTop = "10px";
 
@@ -291,11 +301,20 @@ function clearTab(){
 let makeTabFunctionArray = [makeTab1, makeTab2, makeTab3];
 for(let i = 0; i < 3; i++){
   let tab = document.createElement("div");
-  tab.innerText = `tab${i}`;
+  tab.id = `tab${i}`;
   tabContainer.appendChild(tab);
+  tab.className = "tab";
 
   tab.addEventListener("click", makeTabFunctionArray[i]);
 }
 
+let tab = document.getElementById("tab0");
+tab.innerHTML = "Home";
+tab = document.getElementById("tab1");
+tab.innerHTML = "Menu";
+tab = document.getElementById("tab2");
+tab.innerHTML = "Contact";
 
-makeTab1();
+
+
+makeTab2();
