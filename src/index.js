@@ -58,7 +58,7 @@ function makeTabs(){
 function init(){
   let contentDiv = document.getElementById("content");
   contentDiv.id = 'contentDiv';
-  document.body.style.backgroundImage= 'url(../../assets/GophBGOnly2x.png)';
+  document.body.style.backgroundImage= 'url("./../assets/GophBGOnly2x.png")';
 
   let tabContainer = document.createElement("div");
   tabContainer.id = 'tabContainer';
