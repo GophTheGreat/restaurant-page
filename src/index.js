@@ -4,6 +4,8 @@ import { makeHome } from './modules/home';
 import { makeMenu } from './modules/menu';
 import { makeContact } from './modules/contact';
 
+import gophbg from './../assets/GophBGOnly2x.png';
+
 export function makeMainDiv(){
   let mainDiv = document.createElement("div");
   mainDiv.id = "mainDiv";
@@ -58,8 +60,12 @@ function makeTabs(){
 function init(){
   let contentDiv = document.getElementById("content");
   contentDiv.id = 'contentDiv';
-  document.body.style.backgroundImage= 'url("./../assets/GophBGOnly2x.png")';
 
+  let bgimg = document.createElement('img');
+  bgimg.src = gophbg;
+  bgimg.id = 'bgimg';
+  body.appendChild(bgimg);
+ 
   let tabContainer = document.createElement("div");
   tabContainer.id = 'tabContainer';
   contentDiv.appendChild(tabContainer);

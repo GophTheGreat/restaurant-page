@@ -20,6 +20,7 @@ body{
   width: 1100px;
   border: 10px solid yellow;
   background-color: black;
+  z-index: 1;
 }
 
 .pic{
@@ -38,6 +39,13 @@ body{
   align-content: center;
   background-color: var(--secondary);
   color: gold;
+}
+
+#bgimg{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 .tab{
