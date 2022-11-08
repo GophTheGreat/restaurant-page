@@ -11,7 +11,7 @@ body{
   justify-items: center;
 }
 
-#content{
+#contentDiv{
   display: grid;
   justify-self: center;
   grid-template-rows: 50px 9fr;
@@ -28,7 +28,7 @@ body{
   object-fit: fill;
 }
 
-.tabContainer{
+#tabContainer{
   grid-column-start: 2;
   display: grid;
   width: 100%;
