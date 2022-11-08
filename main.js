@@ -116,7 +116,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"clearTab\": () => (/* binding */ clearTab),\n/* harmony export */   \"makeMainDiv\": () => (/* binding */ makeMainDiv)\n/* harmony export */ });\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modules_home__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/home */ \"./src/modules/home.js\");\n/* harmony import */ var _modules_menu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/menu */ \"./src/modules/menu.js\");\n/* harmony import */ var _modules_contact__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/contact */ \"./src/modules/contact.js\");\n\n\n\n\n\n\nfunction makeMainDiv(){\n  let mainDiv = document.createElement(\"div\");\n  mainDiv.id = \"mainDiv\";\n  mainDiv.style.gridRowStart = '2';\n  mainDiv.style.gridColumn= '1/4';\n  mainDiv.style.display = \"grid\";\n  mainDiv.style.width = '1000px';\n  mainDiv.style.justifyItems = \"center\";\n  mainDiv.style.gridTemplateRows = \"100px repeat(auto-fit, minmax(400px, 1fr))\";\n  mainDiv.style.rowGap = \"2em\";\n  mainDiv.style.paddingBottom = \"10px\";\n  mainDiv.style.paddingTop = \"10px\";\n\n  return mainDiv;\n}\n\nfunction clearTab(){\n\n  while(contentDiv.childNodes.length > 1){\n    let contentDiv = document.getElementById('contentDiv');\n    contentDiv.removeChild(contentDiv.lastChild);\n  }\n}\n\nfunction makeTabs(){\n  let tabContainer = document.getElementById('tabContainer');\n  //Home Button\n  let tab = document.createElement(\"div\");\n  tab.id = 'homeButton';\n  tab.innerHTML = \"Home\";\n  tabContainer.appendChild(tab);\n  tab.className = \"tab\";\n  tab.addEventListener(\"click\", _modules_home__WEBPACK_IMPORTED_MODULE_1__.makeHome);\n\n  // //Menu Button\n  tab = document.createElement(\"div\");\n  tab.id = 'menuButton';\n  tab.innerHTML = \"Menu\";\n  tabContainer.appendChild(tab);\n  tab.className = \"tab\";\n  tab.addEventListener(\"click\", _modules_menu__WEBPACK_IMPORTED_MODULE_2__.makeMenu);\n\n  // //Contact Button\n  tab = document.createElement(\"div\");\n  tab.id = 'contactButton';\n  tab.innerHTML = \"Contact\";\n  tabContainer.appendChild(tab);\n  tab.className = \"tab\";\n  tab.addEventListener(\"click\", _modules_contact__WEBPACK_IMPORTED_MODULE_3__.makeContact);\n}\n\nfunction init(){\n  let contentDiv = document.getElementById(\"content\");\n  contentDiv.id = 'contentDiv';\n  document.body.style.backgroundImage=\"url('./../assets/GophBGOnly2x.png')\";\n\n  let tabContainer = document.createElement(\"div\");\n  tabContainer.id = 'tabContainer';\n  contentDiv.appendChild(tabContainer);\n\n  makeTabs();\n  (0,_modules_home__WEBPACK_IMPORTED_MODULE_1__.makeHome)();\n}\n\ninit();\n\n//# sourceURL=webpack://package.json/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"clearTab\": () => (/* binding */ clearTab),\n/* harmony export */   \"makeMainDiv\": () => (/* binding */ makeMainDiv)\n/* harmony export */ });\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modules_home__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/home */ \"./src/modules/home.js\");\n/* harmony import */ var _modules_menu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/menu */ \"./src/modules/menu.js\");\n/* harmony import */ var _modules_contact__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/contact */ \"./src/modules/contact.js\");\n\n\n\n\n\n\nfunction makeMainDiv(){\n  let mainDiv = document.createElement(\"div\");\n  mainDiv.id = \"mainDiv\";\n  mainDiv.style.gridRowStart = '2';\n  mainDiv.style.gridColumn= '1/4';\n  mainDiv.style.display = \"grid\";\n  mainDiv.style.width = '1000px';\n  mainDiv.style.justifyItems = \"center\";\n  mainDiv.style.gridTemplateRows = \"100px repeat(auto-fit, minmax(400px, 1fr))\";\n  mainDiv.style.rowGap = \"2em\";\n  mainDiv.style.paddingBottom = \"10px\";\n  mainDiv.style.paddingTop = \"10px\";\n\n  return mainDiv;\n}\n\nfunction clearTab(){\n\n  while(contentDiv.childNodes.length > 1){\n    let contentDiv = document.getElementById('contentDiv');\n    contentDiv.removeChild(contentDiv.lastChild);\n  }\n}\n\nfunction makeTabs(){\n  let tabContainer = document.getElementById('tabContainer');\n  //Home Button\n  let tab = document.createElement(\"div\");\n  tab.id = 'homeButton';\n  tab.innerHTML = \"Home\";\n  tabContainer.appendChild(tab);\n  tab.className = \"tab\";\n  tab.addEventListener(\"click\", _modules_home__WEBPACK_IMPORTED_MODULE_1__.makeHome);\n\n  // //Menu Button\n  tab = document.createElement(\"div\");\n  tab.id = 'menuButton';\n  tab.innerHTML = \"Menu\";\n  tabContainer.appendChild(tab);\n  tab.className = \"tab\";\n  tab.addEventListener(\"click\", _modules_menu__WEBPACK_IMPORTED_MODULE_2__.makeMenu);\n\n  // //Contact Button\n  tab = document.createElement(\"div\");\n  tab.id = 'contactButton';\n  tab.innerHTML = \"Contact\";\n  tabContainer.appendChild(tab);\n  tab.className = \"tab\";\n  tab.addEventListener(\"click\", _modules_contact__WEBPACK_IMPORTED_MODULE_3__.makeContact);\n}\n\nfunction init(){\n  let contentDiv = document.getElementById(\"content\");\n  contentDiv.id = 'contentDiv';\n  document.body.style.backgroundImage= 'url(../../assets/GophBGOnly2x.png)';\n\n  let tabContainer = document.createElement(\"div\");\n  tabContainer.id = 'tabContainer';\n  contentDiv.appendChild(tabContainer);\n\n  makeTabs();\n  (0,_modules_home__WEBPACK_IMPORTED_MODULE_1__.makeHome)();\n}\n\ninit();\n\n//# sourceURL=webpack://package.json/./src/index.js?");
 
 /***/ }),
 
@@ -156,7 +156,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"7781170ea500b589e55a.jpg\";\n\n//# sourceURL=webpack://package.json/./assets/Food1.jpg?");
+eval("module.exports = __webpack_require__.p + \"76791288644db85e2d89.jpg\";\n\n//# sourceURL=webpack://package.json/./assets/Food1.jpg?");
 
 /***/ }),
 
@@ -166,7 +166,7 @@ eval("module.exports = __webpack_require__.p + \"7781170ea500b589e55a.jpg\";\n\n
   \**************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"5972d6eb398f31bdeae7.jpg\";\n\n//# sourceURL=webpack://package.json/./assets/Food2.jpg?");
+eval("module.exports = __webpack_require__.p + \"623cf3a09b6f8f11d644.jpg\";\n\n//# sourceURL=webpack://package.json/./assets/Food2.jpg?");
 
 /***/ }),
 
@@ -176,7 +176,7 @@ eval("module.exports = __webpack_require__.p + \"5972d6eb398f31bdeae7.jpg\";\n\n
   \**************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"4d4d046ce2356e01740c.jpg\";\n\n//# sourceURL=webpack://package.json/./assets/Food3.jpg?");
+eval("module.exports = __webpack_require__.p + \"c2099e0cd460115a06c9.jpg\";\n\n//# sourceURL=webpack://package.json/./assets/Food3.jpg?");
 
 /***/ }),
 
@@ -186,7 +186,7 @@ eval("module.exports = __webpack_require__.p + \"4d4d046ce2356e01740c.jpg\";\n\n
   \**************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"d9331385dc9dba8ee627.jpg\";\n\n//# sourceURL=webpack://package.json/./assets/Food4.jpg?");
+eval("module.exports = __webpack_require__.p + \"100793ff58f1726163d4.jpg\";\n\n//# sourceURL=webpack://package.json/./assets/Food4.jpg?");
 
 /***/ })
 
